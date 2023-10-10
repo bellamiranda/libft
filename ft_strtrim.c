@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 17:26:40 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/10 15:42:28 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/10 17:54:08 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,38 +14,30 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*dest;
-	int		i;
-	int		j;
+	int		start;
+	int		end;
 
-	i = 0;
-	j = 0;
-	while (s1[i])
-	{
-		if (s1[i] == set[0])
-			i += set_size;
-		i++;
-		j++;
-	}
-	dest = malloc(j + 1);
-	if (dest == NULL)
+	start = 0;
+	end = ft_strlen(s1);
+	if (s1 == 0)
 		return (NULL);
-	i = 0;
-	j = 0;
-	while (s1[i])
+	if (set == 0)
+		return ((ft_strdup(s1)));
+	while (ft_strchr(set, s1[start]) && s1[start])
+		start++;
+	if (start <= end - start)
 	{
-		if (s1[i] == set[0])
-			i += set_size;
-		dest[j++] = s1[i++];
+		while (ft_strrchr(set, s1[end]))
+			end--;
 	}
-	return (dest);
+	return (ft_substr(s1, start, (end - start + 1)));
 }
 
 /* #include <stdio.h>
 
 int	main(void)
 {
-	char	s1[] = "oi0123456789oi";
+	char	s1[] = "oi01234oi56789";
 	char	set[] = "oi";
 
 	printf("%s\n", ft_strtrim(s1, set));
