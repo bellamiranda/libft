@@ -6,11 +6,11 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 17:26:19 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/07 16:17:28 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/16 18:20:16 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	j;
