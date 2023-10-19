@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 14:57:22 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/19 17:19:31 by ismirand         ###   ########.fr       */
+/*   Created: 2023/10/19 17:17:26 by ismirand          #+#    #+#             */
+/*   Updated: 2023/10/19 19:47:39 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
-{
-	if ((c >= 'a' && c <= 'z') || \
-		(c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
-		return (1);
-	else
-		return (0);
-}
-/*
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
-int	main(void)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-    printf("%d\n", ft_isalnum('-'));
-    printf("%d\n", isalnum('-'));
-}*/
+	t_list	*dest;
+	t_list	*temp;
+	void	*cont;
+
+	if (!lst)
+		return (0);
+	dest = 0;
+	while (lst)
+	{
+		cont = f(lst->content);
+		temp = ft_lstnew(cont);
+		if (!temp)
+		{
+			del(cont);
+			ft_lstclear(&dest, del);
+			return (0);
+		}
+		ft_lstadd_back(&dest, temp);
+		lst = lst->next;
+	}
+	return (dest);
+}

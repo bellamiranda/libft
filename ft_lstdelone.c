@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 14:57:22 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/19 17:19:31 by ismirand         ###   ########.fr       */
+/*   Created: 2023/10/18 20:34:23 by ismirand          #+#    #+#             */
+/*   Updated: 2023/10/19 17:24:10 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
-{
-	if ((c >= 'a' && c <= 'z') || \
-		(c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
-		return (1);
-	else
-		return (0);
-}
-/*
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
-int	main(void)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-    printf("%d\n", ft_isalnum('-'));
-    printf("%d\n", isalnum('-'));
-}*/
+	del(lst->content);
+	free (lst);
+}
+
+/* void	ft_delete(void *list)
+{
+	list = NULL;
+} */

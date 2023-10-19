@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 14:57:22 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/19 17:19:31 by ismirand         ###   ########.fr       */
+/*   Created: 2023/10/17 16:53:18 by ismirand          #+#    #+#             */
+/*   Updated: 2023/10/18 18:25:16 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+#include "libft.h"
+
+t_list	*ft_lstnew(void *content)
 {
-	if ((c >= 'a' && c <= 'z') || \
-		(c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
-		return (1);
-	else
-		return (0);
+	t_list	*new;
+
+	new = malloc(sizeof(t_list));
+	if (!new)
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }
-/*
-#include <stdio.h>
-#include <ctype.h>
+
+/* #include <stdio.h>
 
 int	main(void)
 {
-    printf("%d\n", ft_isalnum('-'));
-    printf("%d\n", isalnum('-'));
-}*/
+	t_list	*elem;
+	char	*str = "Isabella";
+	
+	elem = ft_lstnew((void *)str);
+	printf("%s\n", (char *)elem->content);
+	//free(elem);
+} */

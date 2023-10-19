@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 17:26:19 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/16 18:20:16 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/19 17:19:27 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(const char *str)
 	k = 1;
 	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	while ((str[i] == '-' || str[i] == '+') && 
+	while ((str[i] == '-' || str[i] == '+') && \
 		(str[i + 1] >= '0' && str[i + 1] <= '9'))
 	{
 		if (str[i] == '-')

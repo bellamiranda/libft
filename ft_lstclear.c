@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 14:57:22 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/19 17:19:31 by ismirand         ###   ########.fr       */
+/*   Created: 2023/10/18 20:55:56 by ismirand          #+#    #+#             */
+/*   Updated: 2023/10/19 19:38:36 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
-{
-	if ((c >= 'a' && c <= 'z') || \
-		(c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
-		return (1);
-	else
-		return (0);
-}
-/*
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
-int	main(void)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-    printf("%d\n", ft_isalnum('-'));
-    printf("%d\n", isalnum('-'));
-}*/
+	t_list	*dest;
+	t_list	*temp;
+
+	dest = *lst;
+	while (dest)
+	{
+		temp = dest->next;
+		ft_lstdelone(dest, del);
+		dest = temp;
+	}
+	*lst = NULL;
+}
