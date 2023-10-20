@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 17:26:40 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/10 17:54:08 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 17:09:19 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	if (start <= end - start)
 	{
-		while (ft_strrchr(set, s1[end]))
+		while (ft_strrchr(set, s1[end - 1]))
 			end--;
 	}
-	return (ft_substr(s1, start, (end - start + 1)));
+	return (ft_substr(s1, start, (end - start)));
 }
 
-/* #include <stdio.h>
+/* 
+//tira set do inicio e do final de s1
+//o ultimo while considera end-1 pra nao tirar o espaco do NULL
+#include <stdio.h>
 
 int	main(void)
 {

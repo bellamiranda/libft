@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 16:45:34 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/08 17:17:56 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:40:16 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	size1 = ft_strlen(s1);
 	size2 = ft_strlen(s2);
-	dest = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	dest = ft_calloc(sizeof(char), (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (dest == NULL)
 		return (NULL);
 	i = -1;

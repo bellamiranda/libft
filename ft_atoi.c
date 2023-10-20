@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 17:26:19 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/19 17:19:27 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:34:34 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	ft_atoi(const char *str)
 	return (j * k);
 }
 /*
+//transforma char em int
 #include <stdio.h>
 #include <stdlib.h>
 

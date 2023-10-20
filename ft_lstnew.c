@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:53:18 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/18 18:25:16 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:44:54 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
 
-	new = malloc(sizeof(t_list));
+	new = ft_calloc(sizeof(t_list), 1);
 	if (!new)
 		return (NULL);
 	new->content = content;

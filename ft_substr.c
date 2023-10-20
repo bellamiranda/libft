@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 16:11:59 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/10 15:28:52 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 17:11:31 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (start + len > ft_strlen(s))
 		len = ft_strlen(&s[start]);
-	d = malloc(len + 1);
+	d = ft_calloc(sizeof(char), (len + 1));
 	if (d == NULL)
 		return (NULL);
 	i = -1;
@@ -31,7 +31,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (d);
 }
 
-/* #include <stdio.h>
+/* 
+//cria uma nova str que comeca no index start e tem tamanho len
+#include <stdio.h>
 
 int	main(void)
 {

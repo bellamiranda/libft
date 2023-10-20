@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 21:35:45 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/09 16:48:36 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:40:08 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return ((void *)dest);
 }
 /*
+//aloca nmemb elementos de size bites em uma array void e preenche com NULL
 #include <stdio.h>
 
 int main(void)

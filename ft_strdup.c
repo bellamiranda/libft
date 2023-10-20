@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 21:40:54 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/09 18:32:45 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:38:10 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strdup(const char *s)
 	char	*dest;
 	int		i;
 
-	dest = malloc(ft_strlen(s) + 1);
+	dest = ft_calloc(sizeof(char), (ft_strlen(s) + 1));
 	i = 0;
 	if (dest == NULL)
 		return (NULL);
@@ -30,6 +30,7 @@ char	*ft_strdup(const char *s)
 	return (dest);
 }
 /* 
+//cria uma string exatamente igual
 #include <stdio.h>
 
 int	main(int argc, char **argv)

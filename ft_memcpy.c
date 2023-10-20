@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 19:22:32 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/08 16:07:42 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:12:19 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/* #include <stdio.h>
+/* 
+//retorna a dest alterada com src ate n
+#include <stdio.h>
 
 int main(void)
 {

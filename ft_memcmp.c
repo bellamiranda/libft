@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 20:52:36 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/07 16:35:10 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:50:04 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 /*
+//strcmp para void *
 #include <stdio.h>
 
 int main(void)

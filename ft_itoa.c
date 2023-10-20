@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 18:23:19 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/17 16:19:51 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:41:14 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_itoa(int n)
 	size = ft_count(n);
 	if (n == 0)
 		return (ft_strdup("0"));
-	dest = (char *)malloc(sizeof(char) * (size + 1));
+	dest = (char *)ft_calloc(sizeof(char), (size + 1));
 	if (dest == NULL)
 		return (NULL);
 	if (n < 0)
@@ -60,7 +60,9 @@ char	*ft_itoa(int n)
 	return (dest);
 }
 
-/* #include <stdio.h>
+/*
+//transforma int em uma string char
+#include <stdio.h>
 
 int	main(void)
 {

@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 18:40:15 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/18 18:54:32 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:43:52 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ t_list	*ft_lstlast(t_list *lst)
 	return (lst);
 }
 
-/* #include <stdio.h>
-
-//lst->next != NULL quando chega no ultimo elemento
+/* 
+//lst->next != NULL esse no e o ultimo elemento
+#include <stdio.h>
 
 int	main(void)
 {

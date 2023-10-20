@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 15:26:00 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/08 15:55:24 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:19:42 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 /*
+//preenche n bites de s com o int c, (?ignora null?)
 #include <stdio.h>
 #include <string.h>
 

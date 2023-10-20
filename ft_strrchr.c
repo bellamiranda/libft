@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:50:44 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/09 17:52:54 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:27:30 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ char	*ft_strrchr(const char *s, int c)
 	return (0);
 }
 /* 
+//retorna um pointer pra ultima ocorrencia de c na str
 #include <stdio.h>
 
 int main(void)

@@ -6,13 +6,13 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:55:35 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/17 16:18:51 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:55:31 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_str(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -28,7 +28,7 @@ static int	count_str(char const *s, char c)
 	return (count);
 }
 
-static int	count_char(char const *s, char c)
+static int	count_letters(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -60,8 +60,8 @@ char	**ft_split(char const *s, char c)
 	int		j;
 	int		n_words;
 
-	n_words = count_str(s, c);
-	dest = (char **)malloc(sizeof(char *) * (n_words + 1));
+	n_words = count_words(s, c);
+	dest = (char **)ft_calloc(sizeof(char *), (n_words + 1));
 	if (s == 0 || dest == NULL)
 		return (NULL);
 	j = 0;
@@ -70,17 +70,24 @@ char	**ft_split(char const *s, char c)
 	{
 		while (s[i] && s[i] == c)
 			i++;
-		dest[j] = ft_substr(s, i, count_char(&s[i], c));
+		dest[j] = ft_substr(s, i, count_letters(&s[i], c));
 		if (!dest[j])
 			return (ft_free(dest, j));
-		i += count_char(&s[i], c);
+		i += count_letters(&s[i], c);
 		j++;
 	}
 	dest[j] = 0;
 	return (dest);
 }
 
-/* #include <stdio.h>
+/*
+//count_words conta a quantidade de palavra da matriz \
+	(se a posicao for != c e a proxima for c ou null)
+//count_letters conta quantidade de letras da string \
+	(se a posicao for != c) -> define o fim do substr \
+	ja pula esse valor no index, para comecar a contagem \
+	da proxima str na matriz
+#include <stdio.h>
 
 int	main(void)
 {
@@ -95,23 +102,4 @@ int	main(void)
 		printf("%s\n", str[i]);
 		i++;
 	}
-}
-	printf("%i\n", count_str(s, c));
-	printf("%i\n", count_char(&s[3], c));
-
- 	while (j < n_words)
-	{
-		i = 0;
-		dest[j] = (char *)malloc(sizeof(char) * (count_char(s, c) + 1));
-		while (*s != c && *s)
-		{
-			dest[j][i] = *s;
-			i++;
-			s++;
-		}
-		dest[j][i] = '\0';
-		j++;
-		s++;
-	}
-	dest[j] = 0;
-	return (dest); */
+}*/

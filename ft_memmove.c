@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 19:56:54 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/08 17:17:02 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:14:33 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/* #include <stdio.h>
+/* 
+//memcpy mas considera overlaping (copia de tras pra frente pra \
+nao perder nada)
+#include <stdio.h>
 
 int main(void)
 {

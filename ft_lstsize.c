@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 18:21:53 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/18 18:53:59 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:44:11 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int	ft_lstsize(t_list *lst)
 	return (i);
 }
 
-/* #include <stdio.h>
-
+/* 
 //lst != NULL quando ja nao tem mais lista
+#include <stdio.h>
 
 int	main(void)
 {

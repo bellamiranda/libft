@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 17:31:44 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/09 17:55:37 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:28:21 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ char	*ft_strchr(const char *s, int c)
 	return (0);
 }
 /* 
+//retorna um pointer pra primeira ocorrencia de c na str
 #include <stdio.h>
 #include <string.h>
 

@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 20:34:13 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/08 15:58:17 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:47:01 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (0);
 }
 /*
+//procura o primeiro c em n bites da memoria apontada por *s
 #include <stdio.h>
 
 int main(void)

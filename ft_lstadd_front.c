@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 16:51:09 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/18 18:55:08 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:38:47 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	*lst = new;
 }
 
-/*e como se arredasse o primeiro elemento da lista pra segunda
-posicao e dps definir a primeira posicao como new*/
 /* 
+//e como se arredasse o primeiro elemento da lista pra segunda
+posicao e dps definir a primeira posicao como new
 #include <stdio.h>
 
 int	main(void)

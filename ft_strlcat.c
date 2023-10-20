@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 16:37:08 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/16 18:20:48 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:59:14 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
 	return (s_dest + s_src);
 }
 
-/* #include <stdio.h>
+/* 
+#include <stdio.h>
 #include <bsd/string.h>
 
 int	main(void)

@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 16:28:49 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/09 17:17:49 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:09:04 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,9 @@ unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 	return (ft_strlen((char *)src));
 }
 
-/* #include <stdio.h>
+/* 
+//o retorno e sempre o tamanho da src, e altera a dest ate size
+#include <stdio.h>
 #include <bsd/string.h>
 
 int	main(void)

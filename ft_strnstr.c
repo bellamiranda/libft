@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 16:55:25 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/10 16:33:21 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 17:08:00 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (0);
 }
 /* 
+//procura little em len bites da big, retorna um pointer para \
+onde comeca a little (i corre na big, j na little) \
+ultimo if e pra checar se achou a little inteira
 #include <stdio.h>
 #include <bsd/string.h>
 

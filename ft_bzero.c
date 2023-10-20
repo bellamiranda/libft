@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 18:02:18 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/07 17:44:57 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:34:57 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	ft_bzero(void *s, size_t n)
 		str[i++] = '\0';
 }
 /*
+//preenche a string com nulos ate o tamanho n
 #include <stdio.h>
 #include <strings.h>
 

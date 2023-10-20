@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 20:33:25 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/17 15:07:33 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/20 17:03:09 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	len = ft_strlen(s);
 	if (!s)
 		return (ft_strdup(""));
-	dest = (char *)malloc(sizeof(char) * (len + 1));
+	dest = (char *)ft_calloc(sizeof(char), (len + 1));
 	if (!dest)
 		return (NULL);
 	i = -1;
@@ -31,7 +31,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (dest);
 }
 
-/* #include <stdio.h>
+/* 
+//cria uma nova string aplicando a funcao f a cada char
+#include <stdio.h>
 
 char	ft_test(unsigned int i, char c)
 {
