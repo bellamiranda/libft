@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:29:46 by ismirand          #+#    #+#             */
-/*   Updated: 2023/10/17 15:31:21 by ismirand         ###   ########.fr       */
+/*   Updated: 2023/10/22 18:47:46 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *s, int fd)
 	unsigned int	i;
 
 	i = -1;
+	if (!s)
+		return ;
 	while (s[++i] != '\0')
 		write(fd, &s[i], 1);
 }
